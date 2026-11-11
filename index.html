@@ -114,7 +114,6 @@ footer{padding:56px 0 40px;color:var(--mut);font-size:14px}footer .wrap{display:
 <div class="stats"><div><b>1.230</b><span>abone</span></div><div><b>1,6 milyon</b><span>izlenme</span></div><div><b>174</b><span>video</span></div></div></div>
 <div class="stack rv" id="stack"></div></div></header>
 
-<div class="marq"><div class="tr" id="marq"></div></div>
 
 <section><div class="wrap"><div class="head rv"><div><div class="eyebrow">Son film</div><h2>Yeni çıktı</h2></div></div>
 <div class="bento rv" id="bento"></div></div></section>
@@ -163,7 +162,6 @@ function closeLb(){document.getElementById('lb').classList.remove('on');document
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb()});
 const pop=[...F].sort((a,b)=>b.views-a.views);
 document.getElementById('stack').innerHTML=`<div class="tile t1" onclick="openLb('${F[0].id}')"><img src="${th(F[0].id,'maxresdefault')}" alt=""><span class="lbl">Yeni · ${mm(F[0].s)}</span></div><div class="tile t2" onclick="openLb('${pop[0].id}')"><img src="${th(pop[0].id,'maxresdefault')}" alt=""><span class="lbl">${nf(pop[0].views)} izlenme</span></div>${S[0]?`<div class="tile t3" onclick="openLb('${S[0].id}',1)"><img src="${th(S[0].id,'hqdefault')}" alt="" style="transform:scale(1.8)"></div>`:''}`;
-const m=[...BR,'Corolla','Duster','Boreal','Qashqai','T10X','T10F','Model Y','Clio'];document.getElementById('marq').innerHTML=[...m,...m].map(b=>`<span>${b}</span>`).join('');
 const f0=F[0];
 document.getElementById('bento').innerHTML=`<div class="b big" onclick="this.innerHTML='<iframe src=&quot;https://www.youtube-nocookie.com/embed/${f0.id}?autoplay=1&rel=0&quot; allow=&quot;autoplay; encrypted-media; fullscreen&quot; allowfullscreen></iframe>';this.onclick=null"><img src="${th(f0.id,'maxresdefault')}" alt=""><div class="playc"></div><div class="ov"><span class="tag"><span class="dot"></span>${dt(f0.d)} · ${mm(f0.s)}</span><h3>${esc(f0.t)}</h3></div></div>`;
 let brand='Tümü',n=9;
